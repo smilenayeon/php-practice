@@ -39,6 +39,7 @@ echo $result . "<br>";
 $fruits = [ "apple", "banana", "cherry"];
 echo $fruits[1] . "<br>";
 print_r ($fruits);
+echo "<br>";
 echo count($fruits) . "<br>";
 
 array_splice($fruits,0,1);
@@ -46,13 +47,16 @@ echo $fruits[1] . "<br>";
 
 array_splice($fruits, 1, 0, "kiwi");
 print_r($fruits);
+echo "<br>";
 
 array_push($fruits,"mango");
 print_r($fruits);
+echo "<br>";
 
 $test = ["fig", "pineapple", "plum"];
 array_splice($fruits, 1,0,$test);
 print_r($fruits);
+echo "<br>";
 
 $tasks = [
     "laundry" => "Daniel",
@@ -61,18 +65,26 @@ $tasks = [
 ];
 echo $tasks["trash"];
 print_r($tasks);
+echo "<br>";
 
 sort($tasks);
 print_r($tasks);
+echo "<br>";
 
 $tasks["dusting"] = "Tara";
 print_r($tasks);
+echo "<br>";
 
 $food = [
     "meat" => array("chicken", "pork", "beef"),
     "vegetable" => array("carrot", "lettuce")
 ];
-echo $food["meat"][0];
+echo $food["meat"][0] . "<br>";
+
+
+$string = "Hello World!";
+echo strlen($string) . "<br>";
+echo strpos($string, "o") . "<br>";
 
 ?>
 </body>
