@@ -1,3 +1,7 @@
+<?php
+declare(strict_types=1);  //just like typescript, it becomes strict to type of data. look at line 123
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -114,6 +118,22 @@ echo date("Y-m-d H:i:s") . "<br>"; // current date year-month-date hour-minuite-
 echo time() . "<br>"; // shows how many seconds passed from 1970. January, 1st--aka unix time stamp
 $date = "2023-04-11 12:00:00";
 echo strtotime($date); // 1970,January,1st~ the given  date and time in seconds.
+echo "<pre>";
+
+$globalScopeVar = "yay";
+function sayHello( string $name){    //customed function
+    global $globalScopeVar;   //how to bring the global scope data to use in the function. without this it will get error saying, $globalScopeVar is undefined
+    return "Hello " .  $name ."!" . $globalScopeVar . "!";
+}
+$call=sayHello("Diana"); //must put string as the parameter
+echo $call . "<br>";
+
+function add (int $num01, int $num02){
+    return $result = $num01 + $num02;
+}
+$doMath = add(1,4);
+echo $doMath;
+
 ?>
 </body>
 </html>
