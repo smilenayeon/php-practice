@@ -4,15 +4,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    $lastname = htmlspecialchars($_POST["lastname"]);
    $pet = htmlspecialchars($_POST["favouritepet"]);
 
-   if(empty($firstname | $lastname) ){
+   if(empty($firstname | $lastname ) ){
     header("Location:index.php");
    };
 
    echo "These are the submited data:";
    echo "<br>";
-   echo $firstname;
-   echo "<br>";
-   echo $lastname;
+   echo $firstname . " " . $lastname;
    echo "<br>";
    echo $pet;
 
