@@ -80,12 +80,40 @@ $food = [
     "vegetable" => array("carrot", "lettuce")
 ];
 echo $food["meat"][0] . "<br>";
-
+echo count($food["meat"])  . "<br>"; //get 3
+array_pop($food["meat"]);
+print_r($food["meat"]);
+echo "<br>";
+print_r(array_reverse($food["meat"]));
+echo "<br>";
 
 $string = "Hello World!";
 echo strlen($string) . "<br>";
 echo strpos($string, "o") . "<br>";
+echo str_replace("World", "Diana", $string) . "<br>";
+echo strtolower($string) . "<br>";
+echo strtoupper($string) . "<br>";
+echo substr($string, 0, 5) . "<br>";
+echo substr($string, 6, -1) . "<br>";
+print_r( explode("e", $string)); //get [H] and [llo World!] -- explodes the given letter of the string and give the cut strings into arrays.
+echo "<pre>";
 
+$number=-5.5;
+echo abs($number) . "<br>"; // give 5.5 --just give the absolute value
+echo pow(2,3) . "<br>";
+echo sqrt(16)  . "<br>";
+echo rand(1,10) . "<br>";
+
+
+$array1= ["a", "b","c"];
+$array2=["d","e","f"];
+print_r(array_merge($array1, $array2));
+echo "<pre>";
+
+echo date("Y-m-d H:i:s") . "<br>"; // current date year-month-date hour-minuite-second
+echo time() . "<br>"; // shows how many seconds passed from 1970. January, 1st--aka unix time stamp
+$date = "2023-04-11 12:00:00";
+echo strtotime($date); // 1970,January,1st~ the given  date and time in seconds.
 ?>
 </body>
 </html>
