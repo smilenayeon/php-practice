@@ -132,7 +132,18 @@ function add (int $num01, int $num02){
     return $result = $num01 + $num02;
 }
 $doMath = add(1,4);
-echo $doMath;
+echo $doMath . "<br>";
+
+function myfunction(){
+    static $staticNumber =  0; //by having "static" in front of the var it keeps the changed value
+    $staticNumber++;
+    return $staticNumber;
+}
+
+echo myfunction(); //1
+echo myfunction(); //2
+echo myfunction();//3
+
 
 ?>
 </body>
