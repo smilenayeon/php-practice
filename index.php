@@ -144,6 +144,41 @@ echo myfunction(); //1
 echo myfunction(); //2
 echo myfunction();//3
 
+echo "<pre>";
+
+define("PI", 3.14); //defining constant  aka const ,, const always in all Uppercase!
+echo PI;
+echo "<pre>";
+
+for ($i=0; $i<5; $i++) {
+    echo "This is round " . $i . "<br>";
+};
+
+$whileNum=5;
+while($whileNum<10){
+    echo $whileNum;
+    $whileNum++;
+}
+echo "<pre>";
+
+$doWhileNum = 10;
+do{    //do while loop, even though the condition is not true, it will spit out one round
+    echo $doWhileNum;
+    $doWhileNum++;
+}while ($doWhileNum<10);
+echo"<pre>";
+
+$toys = ["bear", "robot", "blocks", "doll"];
+foreach($toys as $toy){
+    echo $toy . " ";
+}
+echo "<pre/>";
+
+$animals = ["rabbit" => "white", "bear"=>"brown", "hippo" => "purple"];
+foreach($animals as $animal =>$color){
+    echo $animal . " is " . $color . "!" . "<br>";
+};
+
 
 ?>
 </body>
