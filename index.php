@@ -10,6 +10,14 @@ declare(strict_types=1);  //just like typescript, it becomes strict to type of d
     <title>Document</title>
 </head>
 <body>
+    <h3>Sign up</h3>
+    <form action="includes/signupformhandler.inc.php" method="post">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="pwd" placeholder="passowrd">
+        <input type="text" name="email" placeholder="email">
+        <button>Sign up</button>
+
+    </form>
 
 <form action="formhandler.php" method="post">
     <label for="firstname">Firstname?</label>
