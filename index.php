@@ -19,6 +19,21 @@ declare(strict_types=1);  //just like typescript, it becomes strict to type of d
 
     </form>
 
+    <h3>Change Account</h3>
+    <form action="includes/userupdate.inc.php" method="post">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="pwd" placeholder="password">
+        <input type="text" name="email" placeholder="email">
+        <button>Update</button>
+    </form>
+
+    <h3>Delete Account</h3>
+    <form action="includes/userdelete.inc.php" method="post">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="pwd" placeholder="password">
+        <button>Delete</button>
+    </form>
+
 <form action="formhandler.php" method="post">
     <label for="firstname">Firstname?</label>
     <input id="firstname" type="text" name="firstname" placeholder="Firstname...">
