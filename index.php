@@ -1,5 +1,10 @@
 <?php
 declare(strict_types=1);  //just like typescript, it becomes strict to type of data. look at line 123
+session_start(); //starting the session so user gets session-id-cookie that website can rember who that user is while the session is open
+$_SESSION["username"]="diana"; //then this data will be remember on the server on any page with session_start() 
+//session_unset(); // remove all of the session data
+//unset($_SESSION["username"]); //remove one session data
+session_destroy(); //stop the session from running again on another page
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +15,10 @@ declare(strict_types=1);  //just like typescript, it becomes strict to type of d
     <title>Document</title>
 </head>
 <body>
+    <?php
+   echo "<h1>" . $_SESSION["username"] . "</h1>";
+    ?>
+
     <h3>Sign up</h3>
     <form action="includes/signupformhandler.inc.php" method="post">
         <input type="text" name="username" placeholder="username">

@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+echo "<h1>" . $_SESSION["username"] . "</h1>";
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
    $firstname = htmlspecialchars($_POST["firstname"]);
    $lastname = htmlspecialchars($_POST["lastname"]);
@@ -13,6 +17,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    echo $firstname . " " . $lastname;
    echo "<br>";
    echo $pet;
+
+
+
+
 
 
 
