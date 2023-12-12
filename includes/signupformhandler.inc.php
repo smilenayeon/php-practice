@@ -1,12 +1,12 @@
 <?php
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if($_SERVER["REQUEST_METHOD"] == "POST"){ //checking if the user came through the legit way:posting
     $username =  $_POST["username"];
     $pwd = $_POST["pwd"];
     $email = $_POST["email"];
 
     try {
-        require_once "dbh.inc.php"; //sayin I want to connect to a file and paste the file's code heres
+        require_once "dbh.inc.php"; //saying I want to connect to a file and paste the file's code heres
 
         //$query = "INSERT INTO users (username, pwd, email) VALUES (?, ?, ?);";
         $query = "INSERT INTO users (username, pwd, email) VALUES (:username, :pwd, :email);";

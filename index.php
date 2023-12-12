@@ -34,6 +34,13 @@ declare(strict_types=1);  //just like typescript, it becomes strict to type of d
         <button>Delete</button>
     </form>
 
+    <h3>Search Comments</h3>
+    <form class="searchform" action="search.php" method="post">
+        <label for="search">search for username: </label>
+        <input id="serach" type="text" name="usersearch" placeholder="Search...">
+        <button>Search</button>
+    </form>
+
 <form action="formhandler.php" method="post">
     <label for="firstname">Firstname?</label>
     <input id="firstname" type="text" name="firstname" placeholder="Firstname...">
