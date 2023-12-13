@@ -12,10 +12,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){ //checking if the user came through th
         $query = "INSERT INTO users (username, pwd, email) VALUES (:username, :pwd, :email);";
 
         $stmt = $pdo->prepare($query);
+//hash pwd before sending it to DB
+$options=[
+    'cost' =>  12  
+];
+$hashedPwd = password_hash($pwdSignUp, PASSWORD_BCRYPT, $options);
 
         //for the second method bindParam is needed
         $stmt->bindParam(":username", $username);
-        $stmt->bindParam(":pwd", $pwd);
+        $stmt->bindParam(":pwd", $hashedPwd);  // put hashedPwd not pwd.
         $stmt->bindParam(":email", $email);
 
         //$stmt->execute([$username, $pwd, $email]);

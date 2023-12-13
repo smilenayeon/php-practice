@@ -1,7 +1,7 @@
 <?php
-session_start();
+//session_start();
 
-echo "<h1>" . $_SESSION["username"] . "</h1>";
+//echo "<h1>" . $_SESSION["username"] . "</h1>";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
    $firstname = htmlspecialchars($_POST["firstname"]);

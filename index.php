@@ -17,7 +17,7 @@ require_once 'config.php'; //secure session start set in separate file THIS IS T
 </head>
 <body>
     <?php
-   echo "<h1>" . $_SESSION["username"] . "</h1>";
+   //echo "<h1>" . $_SESSION["username"] . "</h1>";
     ?>
 
     <h3>Sign up</h3>
