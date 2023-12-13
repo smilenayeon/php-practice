@@ -1,11 +1,12 @@
-<?php
-declare(strict_types=1);  //just like typescript, it becomes strict to type of data. look at line 123
-session_start(); //starting the session so user gets session-id-cookie that website can rember who that user is while the session is open
-$_SESSION["username"]="diana"; //then this data will be remember on the server on any page with session_start() 
+ <?php
+//declare(strict_types=1);  //just like typescript, it becomes strict to type of data
+//session_start(); //starting the session so user gets session-id-cookie that website can rember who that user is while the session is open
+//$_SESSION["username"]="diana"; //then this data will be remember on the server on any page with session_start() 
 //session_unset(); // remove all of the session data
 //unset($_SESSION["username"]); //remove one session data
-session_destroy(); //stop the session from running again on another page
-?>
+//session_destroy(); //stop the session from running again on another page
+require_once 'config.php'; //secure session start set in separate file THIS IS THE BETTER OPTION!
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
